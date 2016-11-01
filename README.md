@@ -59,4 +59,4 @@ We will produce a website with a Javascript interface display the map of Switzer
 |Mid december TBD | Checkpoint|
 |End of december | Display results |
 |Mid of january | Add data of november-december, rerun|
-|Mini-Symposium |(End of January - TBD)|
+|End of January - TBD | Mini-Symposium |
