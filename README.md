@@ -52,7 +52,7 @@ We will produce a website with a Javascript interface display the map of Switzer
 ## Timeplan
 
 | Date     |   Progress |
-|------------------------------|
+|------------|------------------|
 |Nov. 6th  | Project proposal|
 |Nov 25th | Obtained data from january to end of october <br> Location clustering |
 |Dec 9th | Extract points interest time series <br> Get location from hashtags (if necessary) |
