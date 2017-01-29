@@ -29,9 +29,6 @@ from pyspark.mllib.clustering import KMeans, KMeansModel
 
 if __name__ == "__main__":
 
-
-#>>>     f.write([center[0],',',center[1]])
-#        f.write(str((round(center[0].item(),4)))+'\n')
     sc = SparkContext(appName="KMeansExample")  # SparkContext
 
     #file = '/user/jjmayor/example.txt'
@@ -41,14 +38,14 @@ if __name__ == "__main__":
     def show(x):
         print(x)
 
-    #data.foreach(show)
+    data.foreach(show)
 
 
     #Convert text to numerical values
 
     #parsedData = data.map(lambda line: array([float(x) for x in line.split(' ')])).cache()
     parsedData = data.map(lambda line: array([float(x) for x in line.split(',')])).cache()
-    #parsedData.foreach(show)
+    parsedData.foreach(show)
 
     #Run models
     #clusters = KMeans.train(parsedData, 2, maxIterations=10, runs=10, initializationMode='random')
@@ -69,4 +66,4 @@ if __name__ == "__main__":
     clusters.save(sc, file_save_path)
 
     # Reload models
-    #clusters = KMeansModel.load(sc, file_save_path)
+    #clustersReloaded = KMeansModel.load(sc, file_save_path)
