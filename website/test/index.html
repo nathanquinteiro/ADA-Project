@@ -182,7 +182,26 @@
 						date: newDate,
 						value: tweets
 					});
-					
+
+					if(j < (clusters_data[i].length-1)) {
+						var nextDate = new Date(clusters_data[i][j+1][0]);
+						var interDate = new Date(newDate);
+						interDate = interDate.setDate(interDate.getDate() + 1);
+
+						if(nextDate < interDate) {
+							console.log("Problem")
+						}
+						else {
+							for (var d = new Date(interDate); d < nextDate; d.setDate(d.getDate() + 1)) {
+								var zeroDate = new Date(d);
+							    chartData1.push({
+									date: zeroDate,
+									value: 0
+								});
+							}
+						}
+						
+					}
 					
 				}
 
@@ -193,6 +212,7 @@
 
 			function createStockChart() {
 				 chart = new AmCharts.AmStockChart();
+				 chart.connect= false;
 
 				// DATASETS //////////////////////////////////////////
 				// create data sets first

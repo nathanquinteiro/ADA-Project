@@ -34,7 +34,7 @@ We used Google Earth Engine code editor to produce the NDBI for Switzerland and 
 
 To focus on tweets that are located in non-urban areas, we therefore apply the urban-mask on all tweets, and discard the non-urban tweets.
 
-*Urban areas represents about 76% of the overall area, but only 9.5% of the tweets (~1.3 Millions of tweets).*
+*Urban areas represents about 76% of the overall area, but only 9.5% of the tweets (~1.2 Millions of tweets).*
 
 ### Data clustering
 
