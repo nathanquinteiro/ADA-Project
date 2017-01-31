@@ -1,4 +1,4 @@
-# ADA-Project - Non-urban points of interest in Switzerland
+# ADA-Project - Temporal analysis of networking activity in non-urban points of interest in Switzerland
 
 ## Abstract
 
