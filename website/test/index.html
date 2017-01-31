@@ -34,7 +34,6 @@
 
 			AmCharts.ready(function() {
 			    map = new AmCharts.AmMap();
-			    AmCharts.theme = AmCharts.themes.light;
 
 				
 				map.addListener("clickMapObject", handleMapObjectClick);
@@ -221,7 +220,6 @@
 			function createStockChart() {
 				 chart = new AmCharts.AmStockChart();
 
-			     AmCharts.theme = AmCharts.themes.light;
 				 chart.connect= false;
 
 				// DATASETS //////////////////////////////////////////
@@ -328,7 +326,7 @@
 				<h2 align="left">ADA-Project : Temporal analysis of networking activity in non-urban points of interest in Switzerland</h2> 
     		</div>
     		
-    		<div id="mapdiv" style=" float: center: 65%; background-color:#EEEEEE; height: 600px;"></div>
+    		<div id="mapdiv" style=" float: center: 65%; background-color:#EEEEEE; height: 320px;"></div>
     
 			
 
