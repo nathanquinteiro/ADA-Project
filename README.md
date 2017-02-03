@@ -14,24 +14,26 @@ We will focus on Switzerland Tweeter data mainly because it is a very popular an
 
 ## Urban area detection
 
-![map Switzerland](img/switzerland.png)
-
-![map raw data](img/raw.jpg)
-
-![NDBI map](img/NDBI.png)
-
-![mask urban location zoom](img/mask-zoom.png)
-
-![mask urban location](img/mask-dilatation.jpg)
-
-![final map](img/final-map.jpg)
-
-
 To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
 
 We used Google Earth Engine code editor to produce the NDBI for Switzerland and export the urban mask.
 
 *The Google Earth engine code cand be found in the script [google_earth_NDBI.js](google_earth_NDBI.js "NDBI for Switzerland on Google Earth Engine"). The generated mask in TIFF format can be found in [data/urban_mask.tif](data/urban_mask.tif "TIFF urban mask")*.
+
+![map Switzerland](report/img/switzerland.png)
+
+![map raw data](report/img/raw.jpg)
+
+![NDBI map](report/img/NDBI.png)
+
+![mask urban location zoom](report/img/mask-zoom.png)
+
+![mask urban location](report/img/mask-dilatation.jpg)
+
+![final map](report/img/final-map.jpg)
+
+
+
 
 ## Data processing
 
