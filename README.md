@@ -35,14 +35,14 @@ NDBI image obtained, black dots are urban area :
 
  We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
 
-Mask obtained from your morphological operation applied on the NDBI : The blue dots are the urban areas:
+The figure bellow present the mask obtained from your morphological operation applied on the NDBI. The blue dots are the urban areas.
 
 <p align="center">
  <img src="report/img/mask-dilatation.jpg" width="450"/>
  <figcaption align="center"></figcaption>
 </p>
 
-Zoom on the Mask for the Martigny region :
+Zoom on the mask for the Martigny region :
 
  <p align="center">
    <img src="report/img/mask-zoom.png" width="450"/>
