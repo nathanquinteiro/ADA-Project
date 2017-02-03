@@ -14,11 +14,49 @@ We will focus on Switzerland Tweeter data mainly because it is a very popular an
 
 ## Urban area detection
 
-To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
+To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. 
+
+<p align="center">
+
+
+  <img src="report/img/raw.jpg" width="650"/>
+  <figcaption align="center">Map of Switzerland supperposed with the raw image of satellite</figcaption>
+</p>
+
+We use Landsat-8 satellite images NIR (Near-infrared 0.75–1.4 µm) and SWIR (Short-wavelength infrared 1.4–3 µm) bands to compute NDBI (Nomalized Difference Built-up Index) :
+
+    NDBI = NIR – SWIR / ( NIR + SWIR )
+
+<p align="center">
+  <img src="report/img/NDBI.png" width="650"/>
+  <figcaption align="center">NDBI image obtained : black dots are urban area</figcaption>
+</p>
+
+ We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
+
+
+<p align="center">
+ <img src="report/img/mask-dilatation.jpg" width="450"/>
+ <figcaption align="center">Mask obtained from your morphological operation applied on the NDBI : The blue dots are the urban areas</figcaption>
+</p>
+
+ <p align="center">
+   <img src="report/img/mask-zoom.png" width="450"/>
+   <figcaption align="center">Zoom on the Mask for the low Valais region </figcaption>
+
+ </p>
+
 
 We used Google Earth Engine code editor to produce the NDBI for Switzerland and export the urban mask.
 
 *The Google Earth engine code cand be found in the script [google_earth_NDBI.js](google_earth_NDBI.js "NDBI for Switzerland on Google Earth Engine"). The generated mask in TIFF format can be found in [data/urban_mask.tif](data/urban_mask.tif "TIFF urban mask")*.
+
+
+<p align="center">
+  <img src="report/img/final-map.jpg" width="650"/>
+  <figcaption align="center">The mask obtained superposed to the map of Switzerland</figcaption>
+</p>
+
 
 ## Data processing
 
@@ -39,4 +77,3 @@ To focus on tweets that are located in non-urban areas, we therefore apply the u
 ### Data clustering
 
 To obtain meaningfull informations about the tweets distribution, the 1.8 remaining tweets are gathered in 1000 different clusters based on their location. To perform this task, the kmeans algorithm is run on the data using the processing power of EPFL clusters.
-
