@@ -14,25 +14,38 @@ We will focus on Switzerland Tweeter data mainly because it is a very popular an
 
 ## Urban area detection
 
-To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
+To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images.
+
+<p align="center">
+
+  <img src="report/img/switzerland.png" width="450"/>
+  <img src="report/img/raw.jpg" width="450"/>
+  <figcaption align="center">Left : a standard map of Switzerland / Righ : map supperposed with raw image of satellite</figcaption>
+</p>
+
+
+
+ We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
 
 We used Google Earth Engine code editor to produce the NDBI for Switzerland and export the urban mask.
 
 *The Google Earth engine code cand be found in the script [google_earth_NDBI.js](google_earth_NDBI.js "NDBI for Switzerland on Google Earth Engine"). The generated mask in TIFF format can be found in [data/urban_mask.tif](data/urban_mask.tif "TIFF urban mask")*.
 
-![map Switzerland](report/img/switzerland.png)
 
-![map raw data](report/img/raw.jpg)
-
-![NDBI map](report/img/NDBI.png)
-
-![mask urban location zoom](report/img/mask-zoom.png)
-
-![mask urban location](report/img/mask-dilatation.jpg)
-
-![final map](report/img/final-map.jpg)
+<p align="center">
+  <img src="report/img/NDBI.png" width="650"/>
+</p>
 
 
+<p align="center">
+  <img src="report/img/mask-zoom.png" width="450"/>
+  <img src="report/img/mask-dilatation.jpg" width="450"/>
+</p>
+
+
+<p align="center">
+  <img src="report/img/final-map.jpg" width="650"/>
+</p>
 
 
 ## Data processing
