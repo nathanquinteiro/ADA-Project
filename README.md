@@ -14,6 +14,19 @@ We will focus on Switzerland Tweeter data mainly because it is a very popular an
 
 ## Urban area detection
 
+![map Switzerland](img/switzerland.png)
+
+![map raw data](img/raw.jpg)
+
+![NDBI map](img/NDBI.png)
+
+![mask urban location zoom](img/mask-zoom.png)
+
+![mask urban location](img/mask-dilatation.jpg)
+
+![final map](img/final-map.jpg)
+
+
 To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
 
 We used Google Earth Engine code editor to produce the NDBI for Switzerland and export the urban mask.
@@ -39,4 +52,3 @@ To focus on tweets that are located in non-urban areas, we therefore apply the u
 ### Data clustering
 
 To obtain meaningfull informations about the tweets distribution, the 1.8 remaining tweets are gathered in 1000 different clusters based on their location. To perform this task, the kmeans algorithm is run on the data using the processing power of EPFL clusters.
-
