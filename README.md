@@ -2,7 +2,7 @@
 
 ## Results
 
-The results of this projects are presented as a Javascript Interface that can be found in the folder website/results, or directly seen on this link [http://nathanquinteiro.azurewebsites.net/ada/index.html](link "Link")
+The results of this projects are presented as a Javascript Interface that can be found in the folder website/results, or directly seen on this link [link](http://nathanquinteiro.azurewebsites.net/ada/index.html "Link")
 
 ## Abstract
 
