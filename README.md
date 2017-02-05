@@ -2,11 +2,11 @@
 
 ## Results
 
-The results of this projects are presented as a Javascript Interface that can be found in the folder website/results, or directly seen on this link [link](link "https://drive.google.com/open?id=0BxIBGCVqTlDmRUJSaUZRR3J5Nk0")
+The results of this projects are presented as a Javascript Interface that can be found in the folder website/results, or directly seen on this [link](http://nathanquinteiro.azurewebsites.net/ada/index.html)
 
 ## Prerequesites
 
-If you wish to run the notebook of this repository, you will have to download the full data zup that can be found on this [drive](drive "http://nathanquinteiro.azurewebsites.net/ada/index.html"). Download it and uncompress it at the root of the folder "data".
+If you wish to run the notebook of this repository, you will have to download the full data zup that can be found on this [link](https://drive.google.com/open?id=0BxIBGCVqTlDmRUJSaUZRR3J5Nk0). Download it and uncompress it at the root of the folder "data".
 
 ## Abstract
 
