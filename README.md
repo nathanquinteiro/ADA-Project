@@ -14,48 +14,51 @@ We will focus on Switzerland Tweeter data mainly because it is a very popular an
 
 ## Urban area detection
 
-To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. 
+To determine the urban and non-urban area in Switzerland, we use Landsat-8 satellite images, and compute the NDBI (Normalized Difference Built-up Index), using the SWIR and NIR bands of the satellite images. The image bellow presents the map of Switzerland supperposed with the raw image of satellite :
 
 <p align="center">
 
 
   <img src="report/img/raw.jpg" width="650"/>
-  <figcaption align="center">Map of Switzerland supperposed with the raw image of satellite</figcaption>
+  <figcaption align="center"></figcaption>
 </p>
 
 We use Landsat-8 satellite images NIR (Near-infrared 0.75–1.4 µm) and SWIR (Short-wavelength infrared 1.4–3 µm) bands to compute NDBI (Nomalized Difference Built-up Index) :
 
     NDBI = NIR – SWIR / ( NIR + SWIR )
+NDBI image obtained, black dots are urban area :
 
 <p align="center">
   <img src="report/img/NDBI.png" width="650"/>
-  <figcaption align="center">NDBI image obtained : black dots are urban area</figcaption>
+  <figcaption align="center"></figcaption>
 </p>
 
  We then apply filters and morphological operators on the NDBI image to produce a urban mask that will let us differentiate urban and non-urban location and therefore discard the urban tweets.
 
+The figure bellow present the mask obtained from your morphological operation applied on the NDBI. The blue dots are the urban areas.
 
 <p align="center">
  <img src="report/img/mask-dilatation.jpg" width="450"/>
- <figcaption align="center">Mask obtained from your morphological operation applied on the NDBI : The blue dots are the urban areas</figcaption>
+ <figcaption align="center"></figcaption>
 </p>
+
+Zoom on the mask for the Martigny region :
 
  <p align="center">
    <img src="report/img/mask-zoom.png" width="450"/>
-   <figcaption align="center">Zoom on the Mask for the low Valais region </figcaption>
+   <figcaption align="center"></figcaption>
 
  </p>
 
 
-We used Google Earth Engine code editor to produce the NDBI for Switzerland and export the urban mask.
-
-*The Google Earth engine code cand be found in the script [google_earth_NDBI.js](google_earth_NDBI.js "NDBI for Switzerland on Google Earth Engine"). The generated mask in TIFF format can be found in [data/urban_mask.tif](data/urban_mask.tif "TIFF urban mask")*.
-
+We used Google Earth Engine code editor to produce the NDBI for Switzerland and export the urban mask. The mask obtained superposed to the map of Switzerland :
 
 <p align="center">
   <img src="report/img/final-map.jpg" width="650"/>
-  <figcaption align="center">The mask obtained superposed to the map of Switzerland</figcaption>
+  <figcaption align="center"></figcaption>
 </p>
+
+*The Google Earth engine code cand be found in the script [google_earth_NDBI.js](google_earth_NDBI.js "NDBI for Switzerland on Google Earth Engine"). The generated mask in TIFF format can be found in [data/urban_mask.tif](data/urban_mask.tif "TIFF urban mask")*.
 
 
 ## Data processing
